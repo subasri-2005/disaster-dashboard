@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Management Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#newsFeed">News</a></li>
+                <li><a href="#communication">Communication</a></li>
+                <li><a href="#foodZone">Food Zones</a></li>
+                <li><a href="#clothesZone">Clothes Zones</a></li>
+                <li><a href="#babyCare">Baby Care Tips</a></li>
+                <li><a href="#providers">Providers Section</a></li>
+                <li><a href="#emergencyContacts">Emergency Contacts</a></li>
+                <li><a href="#volunteerRegistration">Volunteer Registration</a></li>
+                <li><a href="#shelterAvailability">Shelter Availability</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="map">
+        <h2>Real-Time Map</h2>
+        <div id="mapContainer" style="height: 450px; width: 100%;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001794.486477219!2d74.90132851172822!3d11.497599899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba613fbcdc70641%3A0x7a8c2be3bfaece8f!2sPuthumala%20Disaster%20Point!5e0!3m2!1sen!2sin!4v1724167619130!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="newsFeed" class="content-container">
+        <h2>Latest News</h2>
+        <div class="news-container">
+            <div class="news-item">Earthquake hits the west coast, causing significant damage.</div>
+            <div class="news-item">Tropical storm approaching the eastern seaboard, prepare for heavy rains.</div>
+            <div class="news-item">Volunteers needed for flood relief in the southern region.</div>
+            <div class="news-item">Emergency shelters set up in response to the wildfire in the north.</div>
+            <div class="news-item">International aid arrives to support disaster recovery efforts.</div>
+            <div class="news-item">Authorities urge residents to stay indoors during the heatwave.</div>
+        </div>
+    </section>
+
+    <section id="communication">
+        <h2>Communication Board</h2>
+        <form id="communicationForm">
+            <label for="message">Post a message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            <button type="submit">Post</button>
+        </form>
+        <div id="communicationBoard"></div>
+    </section>
+
+    <section id="foodZone">
+        <h2>Food Available Zones</h2>
+        <div id="foodZoneContainer">
+            <p>Zone A: 50 units available</p>
+            <p>Zone B: 30 units available</p>
+        </div>
+        <form id="foodRequestForm">
+            <label for="foodRequest">Request Food:</label><br>
+            <textarea id="foodRequest" name="foodRequest" required></textarea><br>
+            <button type="submit">Request Food</button>
+        </form>
+    </section>
+
+    <section id="clothesZone">
+        <h2>Clothes Available Zones</h2>
+        <div id="clothesZoneContainer">
+            <p>Zone C: 100 units available</p>
+            <p>Zone D: 70 units available</p>
+        </div>
+        <form id="clothesRequestForm">
+            <label for="clothesRequest">Request Clothes:</label><br>
+            <textarea id="clothesRequest" name="clothesRequest" required></textarea><br>
+            <button type="submit">Request Clothes</button>
+        </form>
+    </section>
+
+    <section id="babyCare">
+        <h2>Baby Care Tips</h2>
+        <div id="babyCareTips">
+            <ul>
+                <li>Keep babies warm and dry during cold weather.</li>
+                <li>Ensure a clean and safe feeding environment.</li>
+                <li>Monitor baby's health and seek medical help if needed.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="providers">
+        <h2>Providers Section</h2>
+        <p>If you wish to help, please check the requests below and contact the relevant person:</p>
+        <div id="providerRequests">
+            <!-- This section will be populated with requests -->
+        </div>
+        <form id="providerForm">
+            <label for="providerName">Your Name:</label><br>
+            <input type="text" id="providerName" name="providerName" required><br>
+            <label for="providerMessage">Your Message:</label><br>
+            <textarea id="providerMessage" name="providerMessage" required></textarea><br>
+            <button type="submit">Offer Help</button>
+        </form>
+        <h3>Needers' Locations</h3>
+        <div id="neederLocations">
+            <!-- Needers' locations will be displayed here -->
+        </div>
+        <button id="shareLocationButton">Share Your Location</button>
+    </section>
+
+    <section id="emergencyContacts">
+        <h2>Emergency Contacts</h2>
+        <ul id="contactsList">
+            <!-- Emergency contacts will be listed here -->
+        </ul>
+        <form id="contactForm">
+            <label for="contactName">Contact Name:</label><br>
+            <input type="text" id="contactName" name="contactName" required><br>
+            <label for="contactInfo">Contact Information:</label><br>
+            <input type="text" id="contactInfo" name="contactInfo" required><br>
+            <button type="submit">Add Contact</button>
+        </form>
+    </section>
+
+    <section id="volunteerRegistration">
+        <h2>Volunteer Registration</h2>
+        <form id="volunteerForm">
+            <label for="volunteerName">Your Name:</label><br>
+            <input type="text" id="volunteerName" name="volunteerName" required><br>
+            <label for="volunteerSkills">Skills:</label><br>
+            <textarea id="volunteerSkills" name="volunteerSkills" required></textarea><br>
+            <button type="submit">Register as Volunteer</button>
+        </form>
+        <div id="volunteersList">
+            <!-- Registered volunteers will be listed here -->
+        </div>
+    </section>
+
+    <section id="shelterAvailability">
+        <h2>Shelter Availability</h2>
+        <div id="shelterContainer">
+            <p>Shelter A: 20 beds available</p>
+            <p>Shelter B: 15 beds available</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Disaster Management Dashboard</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
